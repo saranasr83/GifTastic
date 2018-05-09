@@ -1,5 +1,8 @@
 body{
     background-color: rgb(188, 219, 219);
+    min-height: 100vh;
+    background: url(../images/marble.jpg) fixed no-repeat center;
+    background-size: cover;
 }
 
 h1{
@@ -7,18 +10,53 @@ h1{
     margin-left: 40%;
     margin-bottom: 34px;
 }
-.btn-primary {
+.btn-default {
     color: black;
     background-color: rgb(62, 226, 226);
     border-color: rgb(62, 226, 226);
-    width: 135px;
-    height: 54px;
-    margin-top: 25px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    text-transform: uppercase;
 }
+
 label{
     font-weight: bolder;
+    width: 100%;
+    text-align: center;
 }
 .topic-btn {
-    background-color: rgb(182, 181, 181);
+    background-color: transparent;
+    border: 2px solid rgb(62, 226, 226);
+    padding: 10px 20px;
     margin-left: 10px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+.topic-btn:active,  .topic-btn:focus, .topic-btn:hover {
+    outline: none !important;
+    border: 2px solid rgb(41, 160, 240);
+}
+.form-wrap {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#topic-section {
+    text-align: center;
+}
+.gif-container {
+    display: inline-block;
+    margin: 20px;
+    text-align: center
+}
+.gif-container  p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.gif-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid rgb(62, 226, 226);
 }

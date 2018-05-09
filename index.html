@@ -17,25 +17,29 @@
 <body>
 
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron" id="main">
             <h1>GifTastic!</h1>
 
             <form class="needs-validation" novalidate>
-                <div class="form-row">
-                    <!-- <div class="col-md-1"></div> -->
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom01">Add a Topic</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="" value="" required>
+                <div class="row form-wrap"> 
+                    <div class="col-lg-12">
+                        <div class="input-group">
                         <div class="valid-feedback">
                             Looks good!
                         </div>
-                    </div>
-                    <button id="add-topic" class="btn btn-primary" type="submit">Submit</button>
+                        <label for="validationCustom01">Add a Topic</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Search for..." required>
+                        <span class="input-group-btn">
+                            <button id="add-topic" class="btn btn-default" type="button">Go!</button>
+                        </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+
             </form>
             <!-- all the topic buttons will be shown here -->
-            </div>
 
-            <div class="col-md-8" id="topic-section"></div>
+            <div id="topic-section"></div>
 
         </div>
         <div id="gifs-appear-here"></div>

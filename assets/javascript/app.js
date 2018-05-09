@@ -88,7 +88,10 @@ $(document).ready(function () {
         var newTopicText = $("#validationCustom01").val().trim();
         // console.log(newTopicText );
         // The new topic from the textbox is then added to our array
-        topics.push(newTopicText);
+        if(newTopicText != ""){
+            topics.push(newTopicText);
+        }
+        
 
         generateTopicSection();
     });
@@ -99,7 +102,7 @@ $(document).ready(function () {
     function getDispalyPics(topics) {
         // console.log("getDisplayPics running with topic:", topic)
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=cDzVAOKFADbFNgyeKftxDbwnHSSovoPU&q=" + topics + "&limit=10"
-
+        $("#gifs-appear-here").empty();
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -116,7 +119,7 @@ $(document).ready(function () {
                 var rating = results[i].rating
                 // console.log("test the rating:", results[i].rating)
                 // Make a div with jQuery and store it in a variable named picSection.
-                var picSectionDiv = $("<div>");
+                var picSectionDiv = $("<div>").addClass("gif-container");
                 // Make a paragraph tag with jQuery and store it in a variable named p.
                 var p = $("<p>");
                 // set the inner text of the paragraph to the rating of the image
